@@ -21,15 +21,15 @@ Se realizaron unas correciones a el End GCODE, todo por un bug que al terminar l
 
 Codigo|
   --------|
-[G92 E0 ;set extruder value back to 0.]
-[G1 E-1 F300 ;retract 15 filament speed 300.]
-[G91 ;relative.]
-[G1 Z2 F2000 ; mover 2 arriba.]
-[M104 S0 ; turn off temperature.]
-[M190 S0 ; turn off temperature.]
-[G90 ; absolute.]
-[G1 X0 F3000 ;.]
-[M84 ; dissable motors.]
+G92 E0 ;set extruder value back to 0
+G1 E-1 F300 ;retract 15 filament speed 300
+G91 ;relative
+G1 Z2 F2000 ; mover 2 arriba
+M104 S0 ; turn off temperature
+M190 S0 ; turn off temperature
+G90 ; absolute
+G1 X0 F3000 ;
+M84 ; dissable motors
 
 ## Marlin 2.1
 
