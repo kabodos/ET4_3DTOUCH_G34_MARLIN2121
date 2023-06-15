@@ -19,6 +19,8 @@ Please test this firmware and let us know if it misbehaves in any way. Volunteer
 
 Se realizaron unas correciones a el End GCODE, todo por un bug que al terminar las impresiones el Hotend baja y pega contra la pieza que se ha impreso, las modificaciones son las siguientes y fueron encontradas en un video de Youtube, dicho video es el siguiente y el reconocimiento es para el [JC 3DESIGN](https://youtu.be/8H3swGrjiTA?t=301).
 
+Codigo|
+  --------|
 [G92 E0 ;set extruder value back to 0.]
 [G1 E-1 F300 ;retract 15 filament speed 300.]
 [G91 ;relative.]
