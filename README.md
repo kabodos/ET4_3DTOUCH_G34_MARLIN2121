@@ -15,6 +15,20 @@
 Additional documentation can be found at the [Marlin Home Page](https://marlinfw.org/).
 Please test this firmware and let us know if it misbehaves in any way. Volunteers are standing by!
 
+## Correcciones a GCODE
+
+Se realizaron unas correciones a el End GCODE, todo por un bug que al terminar las impresiones el Hotend baja y pega contra la pieza que se ha impreso, las modificaciones son las siguientes y fueron encontradas en un video de Youtube, dicho video es el siguiente y el reconocimiento es para el [JC 3DESIGN](https://youtu.be/8H3swGrjiTA?t=301).
+
+G92 E0 ;set extruder value back to 0
+G1 E-1 F300 ;retract 15 filament speed 300
+G91 ;relative
+G1 Z2 F2000 ; mover 2 arriba
+M104 S0 ; turn off temperature
+M190 S0 ; turn off temperature
+G90 ; absolute
+G1 X0 F3000 ;
+M84 ; dissable motors
+
 ## Marlin 2.1
 
 Marlin 2.1 continues to support both 32-bit ARM and 8-bit AVR boards while adding support for up to 9 coordinated axes and to up to 8 extruders.
